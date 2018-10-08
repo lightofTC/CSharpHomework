@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace OrderService
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Order order=new Order();
+            order.start();           
         }
     }
 }
