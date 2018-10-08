@@ -65,7 +65,10 @@ namespace OrderService
                     Input();
                     goto Return;
                 case 2:
-                    Delete(num);
+                    Console.WriteLine("请输入要删除的序号：");
+                    string del = Console.ReadLine();
+                    int delnum = Int32.Parse(task);
+                    Delete(delnum);
                     goto Return;
 
             }
