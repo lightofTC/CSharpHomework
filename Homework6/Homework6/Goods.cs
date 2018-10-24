@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ordertest
+namespace Homework6
 {
     [Serializable]
     public class Goods
@@ -17,7 +17,7 @@ namespace ordertest
             Name = name;
             Price = value;
         }
-        public uint Id{ get; set; }
+        public uint Id { get; set; }
         public string Name { get; set; }
         public double Price
         {
@@ -31,7 +31,7 @@ namespace ordertest
         }
         public override string ToString()
         {
-            return "Id: "+Name+",Value: "+price;
+            return "Id: " + Name + ",Value: " + price;
         }
     }
 }

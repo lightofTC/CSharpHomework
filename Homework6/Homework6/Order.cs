@@ -1,18 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Xml.Serialization;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ordertest
+namespace Homework6
 {
     [Serializable]
     public class Order
     {
         private List<OrderDetails> details = new List<OrderDetails>();
         public Order() { }
-        public Order(uint orderId,Customer customer)
+        public Order(uint orderId, Customer customer)
         {
             Id = orderId;
             Customer = customer;
@@ -24,9 +23,9 @@ namespace ordertest
             get => this.details;
         }
         public double Sum
-        {   
+        {
             get { return details.Sum(d => d.Goods.Price * d.Quantity); }
-            
+
         }
 
         public void AddDetails(OrderDetails orderDetails)

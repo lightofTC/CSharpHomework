@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ordertest
+namespace Homework6
 {
     [Serializable]
     public class OrderDetails
     {
         public OrderDetails() { }
-        public OrderDetails(uint id,Goods goods,uint quantity)
+        public OrderDetails(uint id, Goods goods, uint quantity)
         {
             this.Id = id;
             this.Goods = goods;
@@ -20,7 +20,7 @@ namespace ordertest
         public uint Id { get; set; }
         public Goods Goods { get; set; }
         public uint Quantity { get; set; }
-        
+
         public override int GetHashCode()
         {
             var hashCode = 55555555;

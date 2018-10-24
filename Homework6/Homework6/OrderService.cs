@@ -8,13 +8,13 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml.Serialization;
 
-namespace ordertest
+namespace Homework6
 {
-    
+
     [Serializable]
     public class OrderService
-    { 
-        
+    {
+
         private Dictionary<uint, Order> orderDict;
         public OrderService()
         {
@@ -68,31 +68,31 @@ namespace ordertest
             }
             else
             {
-                throw new Exception("order "+orderId+" is not existed!");
+                throw new Exception("order " + orderId + " is not existed!");
             }
         }
         public List<Order> SearchOrderByGoodsName(string goodsName)
         {
-            var search = orderDict.Values.Where(order => order.Details.Where( d=>d.Goods.Name == goodsName).Count()>0);
+            var search = orderDict.Values.Where(order => order.Details.Where(d => d.Goods.Name == goodsName).Count() > 0);
             return search.ToList();
         }
-        public List<Order> SearchOrdersByCustomer (string customerName)
+        public List<Order> SearchOrdersByCustomer(string customerName)
         {
             var search = orderDict.Values.Where(order => order.Customer.Name == customerName);
             return search.ToList();
-             
+
         }
         public List<Order> SearchOrdersByPrice(double price)
         {
-            var search = orderDict.Values.Where(order =>order.Sum >= price);
+            var search = orderDict.Values.Where(order => order.Sum >= price);
             return search.ToList();
         }
 
         string xmlFileName = "OrderService.xml";
         public void Export(OrderService order)
         {
-            XmlSerializer xmlser = new XmlSerializer(typeof(OrderService[]));           
-            XmlSerialize(xmlser, xmlFileName, order);           
+            XmlSerializer xmlser = new XmlSerializer(typeof(OrderService[]));
+            XmlSerialize(xmlser, xmlFileName, order);
         }
         public void Import()
         {
