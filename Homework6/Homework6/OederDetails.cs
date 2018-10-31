@@ -15,8 +15,7 @@ namespace Homework6
             this.Id = id;
             this.Goods = goods;
             this.Quantity = quantity;
-        }
-        private double sum;
+        }    
         public uint Id { get; set; }
         public Goods Goods { get; set; }
         public uint Quantity { get; set; }
