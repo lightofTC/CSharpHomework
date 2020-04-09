@@ -20,5 +20,5 @@
 答：从服务器回到客户主机时，发送端口为80，目的端口为建立该连接的主机端口，图中网络客户主机C的端口分别为7532与26145，此时源IP地址为服务器B的IP地址，目的IP地址为客户主机C的IP地址。
 
 ##验算结果截图
-
+![](https://github.com/lightofTC/WHUHomework/blob/master/Networks%20and%20Distributed%20Computing/Homework4/2020-4-9.png)
 
