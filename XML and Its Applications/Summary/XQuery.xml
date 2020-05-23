@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="QQ.xsd">
+	<category>
+		<person>
+			<number>11111111</number>
+			<name>ZhangSan</name>
+			<gender>male</gender>
+			<info>A secretary of a foreign company.</info>
+			<age>45</age>
+			<zodiac>Gemini</zodiac>
+			<level>3</level>
+		</person>
+		<person>
+			<number>22222222</number>
+			<dname>bestFriend</dname>
+			<name>LiSi</name>
+			<gender>male</gender>
+			<info>I like swimming.</info>
+			<age>19</age>
+			<zodiac>Capricorn</zodiac>
+			<level>65</level>
+		</person>
+	</category>
+	<category cname="family">
+		<person>
+			<number>33333333</number>
+			<dname>brother</dname>
+			<name>Wangwu</name>
+			<gender>female</gender>
+			<info>Study in PUK.</info>
+			<age>23</age>
+			<zodiac>Pisces</zodiac>
+			<level>42</level>
+		</person>
+		<person>
+			<number>44444444</number>
+			<dname>brother</dname>
+			<name>ZhaoLiu</name>
+			<gender>male</gender>
+			<info>A pupil</info>
+			<age>10</age>
+			<zodiac>Sagittarius</zodiac>
+			<level>10</level>
+		</person>
+	</category>
+	<category cname="schoolmate">
+		<person>
+			<number>55555555</number>
+			<dname>classmate</dname>
+			<name>Tianqi</name>
+			<gender>male</gender>
+			<info>Study harder.</info>
+			<age>23</age>
+			<zodiac>Aries</zodiac>
+			<level>4</level>
+		</person>
+		<person>
+			<number>66666666</number>
+			<name>Cuihua</name>
+			<gender>female</gender>
+			<info>?????</info>
+			<age>21</age>
+			<zodiac>Leo</zodiac>
+			<level>35</level>
+		</person>
+	</category>
+</QQ>

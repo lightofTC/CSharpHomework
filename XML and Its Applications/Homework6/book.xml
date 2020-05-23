@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///E:/%e8%af%be%e4%bb%b6/%e5%a4%a7%e4%b8%89%e4%b8%8b/XML%e5%8f%8a%e5%85%b6%e5%ba%94%e7%94%a8/Homework/Homework6/book.xsd">
+	<title>Data On the Web</title>
+	<author>David</author>
+	<section id="a1" difficulty="hard">
+		<title>1.sfgg</title>
+		<p></p>
+		<figure width="41" height="52.55">
+			<title>1-8.jjg</title>
+			<image source="sggsgg"></image>
+		</figure>
+		<section id="aa1" difficulty="normal">
+			<title>1-1.etyw</title>
+		</section>
+	</section>
+</book>
+

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<healthInformationsheet>
+	<personnelInformation>
+		<family name="张三家">
+			<address>xxx</address>
+			<unit name="武汉大学">
+				<person id="1">
+					<name>张三</name>
+					<sex>男</sex>
+					<age>48</age>
+				</person>
+				<person id="2">
+					<name>张三妻子</name>
+					<sex>女</sex>
+					<age>43</age>
+				</person>
+			</unit>
+			<unit name="x高中">
+				<person id="3">
+					<name>张三女儿</name>
+					<sex>女</sex>
+					<age>18</age>
+				</person>
+			</unit>
+		</family>
+		<family name="李四家">
+			<unit name="武汉大学">
+				<address>yyy</address>
+				<person id="4">
+					<name>李四</name>
+					<sex>男</sex>
+					<age>48</age>
+				</person>
+				<person id="5">
+					<name>李四妻子</name>
+					<sex>女</sex>
+					<age>43</age>
+				</person>
+			</unit>
+			<unit name="x高中">
+				<person id="6">
+					<name>李四儿子</name>
+					<sex>男</sex>
+					<age>18</age>
+				</person>
+			</unit>
+		</family>
+		<family name="王五家">
+			<unit name="武汉大学">
+				<address>zzz</address>
+				<person id="7">
+					<name>张三</name>
+					<sex>男</sex>
+					<age>48</age>
+				</person>
+				<person id="8">
+					<name>王五妻子</name>
+					<sex>女</sex>
+					<age>43</age>
+				</person>
+			</unit>
+			<unit name="x高中">
+				<person id="9">
+					<name>王五儿子</name>
+					<sex>男</sex>
+					<age>18</age>
+				</person>
+			</unit>
+		</family>
+	</personnelInformation>
+	<unitInformation>
+		<unit name="武汉大学">
+			<address>湖北省武汉市武昌区八一路299号</address>
+			<code>430072</code>
+			<employee sex="男">
+				<staff id="1">
+					<name>张三</name>
+					<age>48</age>
+				</staff>
+				<staff id="4">
+					<name>李四</name>
+					<age>48</age>
+				</staff>
+				<staff id="7">
+					<name>王五</name>
+					<age>48</age>
+				</staff>
+			</employee>
+			<employee sex="女">
+				<staff id="2">
+					<name>张三妻子</name>
+					<age>43</age>
+				</staff>
+				<staff id="5">
+					<name>李四妻子</name>
+					<age>43</age>
+				</staff>
+				<staff id="8">
+					<name>王五妻子</name>
+					<age>43</age>
+				</staff>
+			</employee>
+		</unit>
+		<unit name="x高中">
+			<address>xxxxxxx</address>
+			<code>111111</code>
+			<students sex="男">
+				<student id="6">
+					<name>李四儿子</name>
+					<age>18</age>
+				</student>
+				<student id="9">
+					<name>王五儿子</name>
+					<age>18</age>
+				</student>
+			</students>
+			<students sex="女">
+				<student id="3">
+					<name>张三女儿</name>
+					<age>18</age>
+				</student>
+			</students>
+		</unit>
+	</unitInformation>
+</healthInformationsheet>

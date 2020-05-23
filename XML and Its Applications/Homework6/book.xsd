@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2013 sp1 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<xs:element name="book">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="title" type="bookTitleType"/>
+				<xs:element name="author" maxOccurs="3"/>
+				<xs:element name="section" type="sectionType" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="sectionType">
+		<xs:sequence>
+			<xs:element name="title" type="sectionTitleType"/>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="p" type="xs:string"/>
+				<xs:element name="figure">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="title" type="figureTitleType"/>
+							<xs:element name="image">
+								<xs:complexType>
+									<xs:attribute name="source" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="width" type="xs:float" use="required"/>
+						<xs:attribute name="height" type="xs:float" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="section" type="sectionType"/>
+			</xs:choice>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:ID" use="required"/>
+		<xs:attribute name="difficulty" type="difficultyType" use="required"/>
+	</xs:complexType>
+	
+	<xs:simpleType name="titleType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="bookTitleType">
+		<xs:restriction base="titleType">
+			<xs:enumeration value="Data On the Web"/>
+			<xs:enumeration value="TCP/IP Illustrated"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="sectionTitleType">
+		<xs:restriction base="titleType">
+			<xs:pattern value="\d((\-\d)*)\.([a-zA-Z0-9_]+)"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="figureTitleType">
+		<xs:restriction base="titleType">
+			<xs:pattern value="\d((\-\d)*)\.([a-zA-Z0-9_]+)"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="difficultyType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="easy"/>
+			<xs:enumeration value="normal"/>
+			<xs:enumeration value="hard"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

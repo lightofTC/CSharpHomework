@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE contacts SYSTEM "E:\课件\大三下\XML及其应用\课堂练习\Homework3_3.dtd">
+<contacts version="1.0" souce="fff">
+	<contact person="c1111" tags="dd">
+		<name>
+			<first/>
+			<middle/>
+			<last/>
+		</name>
+		<location>
+			<address>
+	</address>
+			<latitude>
+	</latitude>
+			<longtitude>
+	</longtitude>
+		</location>
+		<phone kind="Cell"/>
+		<knows contacts="c1111"/>
+		<description>strong<strong/>
+			<em/>
+		</description>
+	</contact>
+</contacts>

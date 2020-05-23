@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT bib ((book)*)>
+<!ELEMENT book (title*,publisher+,author?,author?,author?,author?,author?)>
+<!ATTLIST book year CDATA #IMPLIED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT publisher (#PCDATA) >
+<!ELEMENT author (#PCDATA)>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE healty [
+	<!ELEMENT healty (persons, companies)+>
+	<!ELEMENT persons (person*)>
+	<!ELEMENT person (person_name, gender, address, age, company_affiliated, phone)>
+	<!ELEMENT person_name (#PCDATA)>
+	<!ELEMENT gender (#PCDATA)>
+	<!ELEMENT address (address_info, post_code)>
+	<!ELEMENT address_info (#PCDATA)>
+	<!ELEMENT post_code (#PCDATA)>
+	<!ELEMENT age (#PCDATA)>
+	<!ELEMENT company_affiliated (#PCDATA)>
+	<!ELEMENT phone (#PCDATA)>
+	<!ATTLIST person_name	person_id ID #REQUIRED>
+	<!ATTLIST company_affiliated	company_id IDREF #REQUIRED>
+	
+	<!ELEMENT companies (company*)>
+	<!ELEMENT company (company_name, address, code, employees, phone)>
+	<!ELEMENT company_name (#PCDATA)>
+	<!ELEMENT code (#PCDATA)>
+	<!ELEMENT employees (employee)*>
+	<!ELEMENT employee (#PCDATA)>
+	<!ATTLIST employee	person_id IDREF #REQUIRED>
+	<!ATTLIST company_name 	company_id ID #REQUIRED 
+							company_type (大学|高中|IT企业|制造工厂) #REQUIRED>
+	<!ENTITY whu "武汉大学">
+	<!ENTITY mi "小米武汉">
+	<!ENTITY uni "大学">
+	<!ENTITY hs "高中">
+	<!ENTITY it "IT企业">
+	<!ENTITY fac "制造工厂">
+]>
+<healty>
+	<persons>
+		<person>
+			<person_name person_id="f1">张三</person_name>
+			<gender>男</gender>
+			<address>
+				<address_info>武昌区珞珈山</address_info>
+				<post_code>430072</post_code>
+			</address>
+			<age>48</age>
+			<company_affiliated company_id="c1">&whu;</company_affiliated>
+			<phone>13800000001</phone>
+		</person>
+		<person>
+			<person_name person_id="f2">李四</person_name>
+			<gender>女</gender>
+			<address>
+				<address_info>武昌区珞珈山</address_info>
+				<post_code>430072</post_code>
+			</address>
+			<age>20</age>
+			<company_affiliated company_id="c1">&whu;</company_affiliated>
+			<phone>13800000002</phone>
+		</person>
+		<person>
+			<person_name person_id="f3">王五</person_name>
+			<gender>男</gender>
+			<address>
+				<address_info>武昌区街道口</address_info>
+				<post_code>430079</post_code>
+			</address>
+			<age>28</age>
+			<company_affiliated company_id="c2">&mi;</company_affiliated>
+			<phone>13800000003</phone>
+		</person>
+	</persons>
+	<companies>
+		<company>
+			<company_name company_id="c1" company_type="&uni;">&whu;</company_name>
+			<address>
+				<address_info>武昌区珞珈山</address_info>
+				<post_code>430072</post_code>
+			</address>
+			<code/>
+			<employees>
+				<employee person_id="f1">张三</employee>
+				<employee person_id="f2">李四</employee>
+			</employees>
+			<phone>027-68750001</phone>
+		</company>
+		<company>
+			<company_name company_id="c2" company_type="&it;">&mi;</company_name>
+			<address>
+				<address_info>武昌区街道口</address_info>
+				<post_code>430079</post_code>
+			</address>
+			<code/>
+			<employees>
+				<employee person_id="f3">王五</employee>
+			</employees>
+			<phone>027-68750001</phone>
+		</company>
+	</companies>
+</healty>

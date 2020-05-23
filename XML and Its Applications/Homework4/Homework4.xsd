@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:element name="healty">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="persons">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="person" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="person_name" type="xs:string">
+<xs:complexType>
+<xs:simpleContent>
+<xs:extension base="xsd:string">
+<xs:attribute name="person_id" type="xs:ID"/>
+</xs:extension>
+</xs:simpleContent>
+</xs:complexType>
+</xs:element>
+<xs:element name="gender" type="xs:string">
+<xs:simpleType>
+	<xs:restriction base="xs:string">
+	<xs:enumeration value="男"/>
+	<xs:enumeration value="女"/>
+	</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element name="address" type="xs:string">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="address_info" type="xs:string"/>
+<xs:element name="post_code" type="integer"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="age">
+<xs:simpleType>
+	<xs:restriction base="xs:positiveInteger">
+<xs:minInclusive value="0"/>
+<xs:maxInclusive value="200"/>	
+	</xs:restriction>
+</xs:simpleType>
+</xs:element>
+<xs:element name="company_affiliated" type="xs:string">
+<xs:complexType>
+<xs:simpleContent>
+<xs:extension base="xsd:string">
+<xs:attribute name="company_id" type="xs:ID"/>
+</xs:extension>
+</xs:simpleContent>
+</xs:complexType>
+</xs:element>
+<xs:element name="phone" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="companies">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="company" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="company_name" type="xs:string">
+<xs:complexType>
+<xs:simpleContent>
+<xs:extension base="xsd:string">
+<xs:attribute name="company_id" type="xs:string"/>
+<xs:attribute name="company_type" type="xs:string"/>
+</xs:extension>
+</xs:simpleContent>
+</xs:complexType>
+</xs:element>
+<xs:element name="address" type="xs:string">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="address_info" type="xs:string"/>
+<xs:element name="post_code" type="integer"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="code" type="xs:string"/>
+<xs:element name="employees" type="xs:string">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="employee" maxOccurs="unbounded">
+<xs:complexType>
+<xs:simpleContent>
+<xs:extension base="xsd:string">
+<xs:attribute name="person_id" type="xs:IDREF"/>
+</xs:extension>
+</xs:simpleContent>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:element name="phone" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+
+<healty>
+	<persons>
+		<person>
+			<person_name person_id="f1">张三</person_name>
+			<gender>男</gender>
+			<address>
+				<address_info>武昌区珞珈山</address_info>
+				<post_code>430072</post_code>
+			</address>
+			<age>48</age>
+			<company_affiliated company_id="c1">武汉大学</company_affiliated>
+			<phone>13800000001</phone>
+		</person>
+		<person>
+			<person_name person_id="f2">李四</person_name>
+			<gender>女</gender>
+			<address>
+				<address_info>武昌区珞珈山</address_info>
+				<post_code>430072</post_code>
+			</address>
+			<age>20</age>
+			<company_affiliated company_id="c1">武汉大学</company_affiliated>
+			<phone>13800000002</phone>
+		</person>
+		<person>
+			<person_name person_id="f3">王五</person_name>
+			<gender>男</gender>
+			<address>
+				<address_info>武昌区街道口</address_info>
+				<post_code>430079</post_code>
+			</address>
+			<age>28</age>
+			<company_affiliated company_id="c2">小米武汉</company_affiliated>
+			<phone>13800000003</phone>
+		</person>
+	</persons>
+	<companies>
+		<company>
+			<company_name company_id="c1" company_type="大学">武汉大学</company_name>
+			<address>
+				<address_info>武昌区珞珈山</address_info>
+				<post_code>430072</post_code>
+			</address>
+			<code/>
+			<employees>
+				<employee person_id="f1">张三</employee>
+				<employee person_id="f2">李四</employee>
+			</employees>
+			<phone>027-68750001</phone>
+		</company>
+		<company>
+			<company_name company_id="c2" company_type="IT企业">小米武汉</company_name>
+			<address>
+				<address_info>武昌区街道口</address_info>
+				<post_code>430079</post_code>
+			</address>
+			<code/>
+			<employees>
+				<employee person_id="f3">王五</employee>
+			</employees>
+			<phone>027-68750001</phone>
+		</company>
+	</companies>
+</healty>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT root (root1, root2?)*>
+<!ELEMENT root1 (root2*)>
+<!ELEMENT root2 (root3+)>
+<!ELEMENT root3 (root1?)>

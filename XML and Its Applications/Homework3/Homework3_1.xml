@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE healty [
+	<!ELEMENT healty (persons, companies)>
+	<!ELEMENT persons (person)+>
+	<!ELEMENT person (faddress, fperson)>
+	<!ELEMENT faddress (#PCDATA)>
+	<!ELEMENT fperson (fname, fgender, fage, fcompany)>
+	<!ATTLIST fperson
+		fidno ID #REQUIRED
+	>
+	<!ELEMENT fname (#PCDATA)>
+	<!ELEMENT fgender (#PCDATA)>
+	<!ELEMENT fage (#PCDATA)>
+	<!ELEMENT fcompany (#PCDATA)>
+	<!ELEMENT companies (company)+>
+	<!ELEMENT company (address, code, employee+)>
+	<!ATTLIST company
+		name (武汉大学 | X高中) #REQUIRED
+	>
+	<!ELEMENT address (#PCDATA)>
+	<!ELEMENT code (#PCDATA)>
+	<!ELEMENT employee (name, gender, age)>
+	<!ATTLIST employee
+		idno IDREF #REQUIRED
+	>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT gender (#PCDATA)>
+	<!ELEMENT age (#PCDATA)>
+	<!ENTITY whu "武汉大学">
+]>
+<healty>
+	<persons>
+		<person>
+			<faddress/>
+			<fperson fidno="f1">
+				<fname>李四</fname>
+				<fgender>男</fgender>
+				<fage>48</fage>
+				<fcompany>&whu;</fcompany>
+			</fperson>
+		</person>
+		<person>
+			<faddress/>
+			<fperson fidno="f2">
+				<fname>张三</fname>
+				<fgender>男</fgender>
+				<fage>48</fage>
+				<fcompany>&whu;</fcompany>
+			</fperson>
+		</person>
+		<person>
+			<faddress/>
+			<fperson fidno="f3">
+				<fname>王五</fname>
+				<fgender>男</fgender>
+				<fage>48</fage>
+				<fcompany>&whu;</fcompany>
+			</fperson>
+		</person>
+		<person>
+			<faddress/>
+			<fperson fidno="f4">
+				<fname>王五儿子</fname>
+				<fgender>男</fgender>
+				<fage>18</fage>
+				<fcompany>X高中</fcompany>
+			</fperson>
+		</person>
+	</persons>
+	<companies>
+		<company name="&whu;">
+			<address/>
+			<code/>
+			<employee idno="f1">
+				<name>李四</name>
+				<gender>男</gender>
+				<age>48</age>
+			</employee>
+		</company>
+		<company name="X高中">
+			<address/>
+			<code/>
+			<employee idno="f4">
+				<name>王五儿子</name>
+				<gender>男</gender>
+				<age>18</age>
+			</employee>
+		</company>
+	</companies>
+</healty>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bib SYSTEM "E:\课件\大三下\XML及其应用\Homework\Summary\bib.dtd">
+<bib>
+	<book year="2015">
+		<title>Xml Applications</title>
+		<publisher>Wuhan University</publisher>
+		<author>Zhang San</author>
+		<author> Li Si </author>
+	</book>
+	<book year="2016">
+		<title> Xml Applications </title>
+		<publisher>Qinghua University</publisher>
+		<author>Zhang San</author>
+		<author>Wang Wu</author>
+	</book>
+	<book year="2017">
+		<title>XML Development Techniques</title>
+		<publisher>Wuhan University</publisher>
+		<author>Li Si</author>
+		<author> Wang Wu </author>
+	</book>
+	<book year="2018">
+		<title> XML Development Techniques </title>
+		<publisher>Qinghua University</publisher>
+		<author>Wang Wu </author>
+		<author>Ma Liu</author>
+	</book>
+	<book year="2019">
+		<title> XML Development Techniques </title>
+		<publisher>Wuhan University</publisher>
+		<author>Ma Liu</author>
+		<author>Yuan Qi</author>
+	</book>
+	<book year="2020">
+		<title> Xml Applications </title>
+		<publisher>Qinghua University</publisher>
+		<author>Yuan Qi</author>
+		<author>Zhang San</author>
+	</book>
+</bib>

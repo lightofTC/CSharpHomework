@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="QQ" type="QQType"/>
+	<xs:complexType name="QQType">
+		<xs:sequence>
+			<xs:element name="category" type="typeType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="typeType">
+		<xs:choice>
+			<xs:element name="person" type="memberType" maxOccurs="unbounded"/>
+		</xs:choice>
+		<xs:attribute name="cname"/>
+	</xs:complexType>
+	<xs:complexType name="memberType">
+		<xs:all>
+			<xs:element name="number" type="numberType"/>
+			<xs:element name="dname" type="stringType" minOccurs="0"/>
+			<xs:element name="name" type="stringType"/>
+			<xs:element name="gender" type="genderType"/>
+			<xs:element name="info" type="stringType"/>
+			<xs:element name="age" type="ageType"/>
+			<xs:element name="zodiac" type="zodiacType"/>
+			<xs:element name="level" type="ageType"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:simpleType name="stringType">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="genderType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="male"/>
+			<xs:enumeration value="female"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ageType">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="150"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="zodiacType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Capricorn"/>
+			<xs:enumeration value="Aquarius"/>
+			<xs:enumeration value="Pisces"/>
+			<xs:enumeration value="Aries"/>
+			<xs:enumeration value="Taurus"/>
+			<xs:enumeration value="Gemini"/>
+			<xs:enumeration value="Cancer"/>
+			<xs:enumeration value="Leo"/>
+			<xs:enumeration value="Virgo"/>
+			<xs:enumeration value="Libra"/>
+			<xs:enumeration value="Scorpio"/>
+			<xs:enumeration value="Sagittarius"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="numberType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="7"/>
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

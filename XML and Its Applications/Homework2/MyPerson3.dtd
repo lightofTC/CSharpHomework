@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="yes" encoding="UTF-8"?>
+<!DOCTYPE healthInformationSheet[
+<!ENTITY % p "(#PCDATA)">
+<!ELEMENT personnelInformation(family+)>
+<!ELEMENT unitInformation %p;>
+<!ELEMENT family(address,person+)>
+<!ELEMENT address %p;>
+<!ELEMENT person(id,name,sex,age,unit)>
+<!ELEMENT id #REQUIRED>
+<!ELEMENT name %p;>
+<!ELEMENT sex %p;>
+<!ELEMENT age >
+<!ELEMENT unit %p;>
+<!ELEMENT unitInformation(unit+)>
+<!ELEMENT unit(address,code,staff)>
+<!ELEMENT id #REQUIRED>
+<!ELEMENT name %p;>
+<!ELEMENT sex %p;>
+<!ELEMENT age >]>
+ 

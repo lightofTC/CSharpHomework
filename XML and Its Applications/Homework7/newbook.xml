@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Comment-->
+<book xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<authors>
+		<author/>
+		<author/>
+		<author/>
+	</authors>
+	<!--Comment-->
+	<section id="abstract" difficulty="easy">
+		<title>abstract</title>
+	</section>
+	<!--Comment-->
+	<section id="intro" difficulty="easy">
+		<title>Introduction</title>
+		<!--Comment-->
+		<section>
+			<title>Web Data and the Two Cultures</title>
+			<figure>
+				<title>Web Data and the Two Cultures</title>
+			</figure>
+		</section>
+	</section>
+	<!--Comment-->
+	<section id="syntax" difficulty="medium">
+		<title>A Syntax For Data</title>
+		<!--Comment-->
+		<section>
+			<title>Base Types</title>
+		</section>
+		<!--Comment-->
+		<section>
+			<title>Representing Relational Databases</title>
+			<figure>
+				<title>Representing Relational Databases</title>
+			</figure>
+		</section>
+		<!--Comment-->
+		<section>
+			<title>Representing Object Databases</title>
+		</section>
+		<figure id="syntax" difficulty="medium">
+			<title>A Syntax For Data</title>
+		</figure>
+	</section>
+</book>
